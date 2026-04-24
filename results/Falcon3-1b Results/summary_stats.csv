@@ -1,0 +1,7 @@
+round_label,n_questions,accuracy,hallucination_rate,avg_confidence
+Baseline,100,0.01,0.03,0.49
+Round 1,100,0.01,0.03,0.49
+Round 2,100,0.01,0.03,0.49
+Round 3,100,0.01,0.03,0.49
+Round 4,100,0.01,0.03,0.49
+Round 5,100,0.01,0.03,0.49

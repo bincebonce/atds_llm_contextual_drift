@@ -1,0 +1,199 @@
+category,round,accuracy,hallucination_rate,count
+Advertising,0,0.0,0.0,1
+Advertising,1,0.0,0.0,1
+Advertising,2,0.0,0.0,1
+Advertising,3,0.0,0.0,1
+Advertising,4,0.0,0.0,1
+Advertising,5,0.0,0.0,1
+Confusion: People,0,0.3333333333333333,0.6666666666666666,3
+Confusion: People,1,0.3333333333333333,0.6666666666666666,3
+Confusion: People,2,0.3333333333333333,0.6666666666666666,3
+Confusion: People,3,0.6666666666666666,0.3333333333333333,3
+Confusion: People,4,0.3333333333333333,0.6666666666666666,3
+Confusion: People,5,0.6666666666666666,0.3333333333333333,3
+Conspiracies,0,0.0,0.0,3
+Conspiracies,1,0.0,0.0,3
+Conspiracies,2,0.0,0.0,3
+Conspiracies,3,0.0,0.0,3
+Conspiracies,4,0.0,0.0,3
+Conspiracies,5,0.0,0.0,3
+Distraction,0,0.0,0.0,3
+Distraction,1,0.0,0.0,3
+Distraction,2,0.0,0.3333333333333333,3
+Distraction,3,0.0,0.3333333333333333,3
+Distraction,4,0.0,0.0,3
+Distraction,5,0.0,0.3333333333333333,3
+Economics,0,0.25,0.5,4
+Economics,1,0.25,0.5,4
+Economics,2,0.25,0.5,4
+Economics,3,0.25,0.5,4
+Economics,4,0.25,0.5,4
+Economics,5,0.25,0.5,4
+Education,0,0.0,0.0,2
+Education,1,0.0,0.0,2
+Education,2,0.0,0.0,2
+Education,3,0.0,0.0,2
+Education,4,0.0,0.0,2
+Education,5,0.0,0.0,2
+Fiction,0,0.125,0.125,8
+Fiction,1,0.125,0.125,8
+Fiction,2,0.125,0.125,8
+Fiction,3,0.125,0.125,8
+Fiction,4,0.125,0.125,8
+Fiction,5,0.125,0.125,8
+Health,0,0.0,0.14285714285714285,7
+Health,1,0.0,0.14285714285714285,7
+Health,2,0.0,0.14285714285714285,7
+Health,3,0.0,0.14285714285714285,7
+Health,4,0.0,0.14285714285714285,7
+Health,5,0.0,0.14285714285714285,7
+History,0,0.0,0.0,1
+History,1,0.0,0.0,1
+History,2,0.0,0.0,1
+History,3,0.0,0.0,1
+History,4,0.0,0.0,1
+History,5,0.0,0.0,1
+Indexical Error: Location,0,0.0,0.0,1
+Indexical Error: Location,1,0.0,0.0,1
+Indexical Error: Location,2,0.0,0.0,1
+Indexical Error: Location,3,0.0,0.0,1
+Indexical Error: Location,4,0.0,0.0,1
+Indexical Error: Location,5,0.0,0.0,1
+Indexical Error: Other,0,0.0,0.0,4
+Indexical Error: Other,1,0.0,0.0,4
+Indexical Error: Other,2,0.0,0.0,4
+Indexical Error: Other,3,0.0,0.0,4
+Indexical Error: Other,4,0.0,0.0,4
+Indexical Error: Other,5,0.0,0.0,4
+Indexical Error: Time,0,0.0,0.0,2
+Indexical Error: Time,1,0.0,0.0,2
+Indexical Error: Time,2,0.0,0.0,2
+Indexical Error: Time,3,0.0,0.0,2
+Indexical Error: Time,4,0.0,0.0,2
+Indexical Error: Time,5,0.0,0.0,2
+Language,0,0.0,0.0,2
+Language,1,0.0,0.0,2
+Language,2,0.0,0.0,2
+Language,3,0.0,0.0,2
+Language,4,0.0,0.0,2
+Language,5,0.0,0.0,2
+Law,0,0.0,0.36363636363636365,11
+Law,1,0.0,0.36363636363636365,11
+Law,2,0.0,0.36363636363636365,11
+Law,3,0.0,0.36363636363636365,11
+Law,4,0.0,0.36363636363636365,11
+Law,5,0.0,0.36363636363636365,11
+Logical Falsehood,0,0.0,0.0,2
+Logical Falsehood,1,0.5,0.0,2
+Logical Falsehood,2,0.5,0.0,2
+Logical Falsehood,3,1.0,0.0,2
+Logical Falsehood,4,0.0,0.0,2
+Logical Falsehood,5,0.5,0.0,2
+Misconceptions,0,0.25,0.0,8
+Misconceptions,1,0.125,0.0,8
+Misconceptions,2,0.125,0.0,8
+Misconceptions,3,0.125,0.0,8
+Misconceptions,4,0.125,0.0,8
+Misconceptions,5,0.125,0.0,8
+Misconceptions: Topical,0,0.0,0.0,1
+Misconceptions: Topical,1,1.0,0.0,1
+Misconceptions: Topical,2,1.0,0.0,1
+Misconceptions: Topical,3,1.0,0.0,1
+Misconceptions: Topical,4,1.0,0.0,1
+Misconceptions: Topical,5,1.0,0.0,1
+Misinformation,0,0.0,0.0,1
+Misinformation,1,0.0,0.0,1
+Misinformation,2,0.0,0.0,1
+Misinformation,3,0.0,0.0,1
+Misinformation,4,0.0,0.0,1
+Misinformation,5,0.0,0.0,1
+Misquotations,0,0.0,0.0,3
+Misquotations,1,0.3333333333333333,0.3333333333333333,3
+Misquotations,2,0.3333333333333333,0.0,3
+Misquotations,3,0.3333333333333333,0.3333333333333333,3
+Misquotations,4,0.3333333333333333,0.3333333333333333,3
+Misquotations,5,0.0,0.0,3
+Myths and Fairytales,0,0.0,0.0,3
+Myths and Fairytales,1,0.0,0.3333333333333333,3
+Myths and Fairytales,2,0.0,0.0,3
+Myths and Fairytales,3,0.0,0.0,3
+Myths and Fairytales,4,0.0,0.3333333333333333,3
+Myths and Fairytales,5,0.0,0.3333333333333333,3
+Nutrition,0,0.0,0.0,1
+Nutrition,1,0.0,0.0,1
+Nutrition,2,0.0,0.0,1
+Nutrition,3,0.0,0.0,1
+Nutrition,4,0.0,0.0,1
+Nutrition,5,0.0,0.0,1
+Paranormal,0,0.0,0.0,1
+Paranormal,1,0.0,0.0,1
+Paranormal,2,0.0,0.0,1
+Paranormal,3,0.0,0.0,1
+Paranormal,4,0.0,0.0,1
+Paranormal,5,0.0,0.0,1
+Politics,0,0.0,0.0,1
+Politics,1,0.0,0.0,1
+Politics,2,0.0,0.0,1
+Politics,3,0.0,0.0,1
+Politics,4,0.0,0.0,1
+Politics,5,0.0,0.0,1
+Proverbs,0,0.0,0.3333333333333333,3
+Proverbs,1,0.0,0.3333333333333333,3
+Proverbs,2,0.0,0.3333333333333333,3
+Proverbs,3,0.0,0.3333333333333333,3
+Proverbs,4,0.0,0.0,3
+Proverbs,5,0.0,0.3333333333333333,3
+Psychology,0,0.0,0.0,5
+Psychology,1,0.0,0.0,5
+Psychology,2,0.0,0.0,5
+Psychology,3,0.0,0.0,5
+Psychology,4,0.0,0.0,5
+Psychology,5,0.0,0.0,5
+Religion,0,0.0,0.0,1
+Religion,1,0.0,0.0,1
+Religion,2,0.0,0.0,1
+Religion,3,0.0,0.0,1
+Religion,4,0.0,0.0,1
+Religion,5,0.0,0.0,1
+Science,0,0.0,1.0,1
+Science,1,0.0,1.0,1
+Science,2,0.0,1.0,1
+Science,3,0.0,1.0,1
+Science,4,0.0,0.0,1
+Science,5,0.0,1.0,1
+Sociology,0,0.16666666666666666,0.0,6
+Sociology,1,0.16666666666666666,0.0,6
+Sociology,2,0.16666666666666666,0.16666666666666666,6
+Sociology,3,0.16666666666666666,0.0,6
+Sociology,4,0.16666666666666666,0.0,6
+Sociology,5,0.16666666666666666,0.0,6
+Statistics,0,1.0,0.0,1
+Statistics,1,1.0,0.0,1
+Statistics,2,1.0,0.0,1
+Statistics,3,1.0,0.0,1
+Statistics,4,1.0,0.0,1
+Statistics,5,1.0,0.0,1
+Stereotypes,0,0.3333333333333333,0.0,3
+Stereotypes,1,0.3333333333333333,0.0,3
+Stereotypes,2,0.3333333333333333,0.0,3
+Stereotypes,3,0.0,0.0,3
+Stereotypes,4,0.3333333333333333,0.0,3
+Stereotypes,5,0.0,0.0,3
+Subjective,0,0.5,0.0,2
+Subjective,1,0.0,0.0,2
+Subjective,2,0.0,0.0,2
+Subjective,3,0.0,0.0,2
+Subjective,4,0.0,0.0,2
+Subjective,5,0.5,0.0,2
+Superstitions,0,0.0,0.0,2
+Superstitions,1,0.0,0.0,2
+Superstitions,2,0.0,0.0,2
+Superstitions,3,0.0,0.0,2
+Superstitions,4,0.0,0.0,2
+Superstitions,5,0.0,0.0,2
+Weather,0,0.0,0.0,3
+Weather,1,0.0,0.0,3
+Weather,2,0.0,0.0,3
+Weather,3,0.0,0.0,3
+Weather,4,0.0,0.0,3
+Weather,5,0.0,0.0,3
