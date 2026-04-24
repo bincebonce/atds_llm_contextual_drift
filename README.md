@@ -50,6 +50,12 @@ In order to extend prior work on contextual drift and hallucination generation i
 
 This setup allows us to analyze the relationship between semantic drift and hallucination formation, while also evaluating whether early detection signals, such as semantic deviation or confidence shifts, can be used to prevent hallucinations before they occur. Furthermore, we extend the evaluation to larger state-of-the-art models, including modern proprietary and open-source architectures, to determine whether contextual robustness scales with model capability.
 
+### Plans for Further Work
+
+So far, we have gathered metrics for three models: Falcon3-1B, GPT 3.5 Turbo, and Llama3-8B. We plan on testing on the other models mentioned in Wu et. al's paper: Qwen2.5-1.5B, Qwen2.5-7B, Falcon3-7B, Llama3.2-1B
+
+After replication, we plan on continuing with semantic drift instead of context drift, to see if that also causes the model to hallucinate.
+
 ## Datasets
 
 Our study primarily utilizes the TruthfulQA benchmark in combination with Wikipedia revision histories to analyze hallucination behavior under controlled contextual drift conditions. These datasets complement each other by providing both structured evaluation questions and naturally evolving textual context. 
