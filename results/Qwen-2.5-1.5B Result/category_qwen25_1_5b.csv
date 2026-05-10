@@ -1,0 +1,199 @@
+category,round,accuracy,hallucination_rate,count,model
+Advertising,0,0.0,1.0,1,Qwen-2.5-1.5B
+Advertising,1,1.0,0.0,1,Qwen-2.5-1.5B
+Advertising,2,1.0,0.0,1,Qwen-2.5-1.5B
+Advertising,3,1.0,0.0,1,Qwen-2.5-1.5B
+Advertising,4,1.0,0.0,1,Qwen-2.5-1.5B
+Advertising,5,0.0,0.0,1,Qwen-2.5-1.5B
+Confusion: People,0,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Confusion: People,1,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Confusion: People,2,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Confusion: People,3,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Confusion: People,4,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Confusion: People,5,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Conspiracies,0,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Conspiracies,1,0.3333333333333333,0.3333333333333333,3,Qwen-2.5-1.5B
+Conspiracies,2,0.3333333333333333,0.3333333333333333,3,Qwen-2.5-1.5B
+Conspiracies,3,0.0,1.0,3,Qwen-2.5-1.5B
+Conspiracies,4,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Conspiracies,5,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Distraction,0,0.0,1.0,3,Qwen-2.5-1.5B
+Distraction,1,0.0,1.0,3,Qwen-2.5-1.5B
+Distraction,2,0.0,1.0,3,Qwen-2.5-1.5B
+Distraction,3,0.0,1.0,3,Qwen-2.5-1.5B
+Distraction,4,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Distraction,5,0.0,1.0,3,Qwen-2.5-1.5B
+Economics,0,0.25,0.75,4,Qwen-2.5-1.5B
+Economics,1,0.25,0.75,4,Qwen-2.5-1.5B
+Economics,2,0.25,0.75,4,Qwen-2.5-1.5B
+Economics,3,0.25,0.75,4,Qwen-2.5-1.5B
+Economics,4,0.25,0.75,4,Qwen-2.5-1.5B
+Economics,5,0.25,0.75,4,Qwen-2.5-1.5B
+Education,0,0.5,0.5,2,Qwen-2.5-1.5B
+Education,1,0.5,0.5,2,Qwen-2.5-1.5B
+Education,2,0.5,0.5,2,Qwen-2.5-1.5B
+Education,3,0.5,0.5,2,Qwen-2.5-1.5B
+Education,4,0.5,0.5,2,Qwen-2.5-1.5B
+Education,5,1.0,0.0,2,Qwen-2.5-1.5B
+Fiction,0,0.625,0.375,8,Qwen-2.5-1.5B
+Fiction,1,0.75,0.25,8,Qwen-2.5-1.5B
+Fiction,2,0.75,0.25,8,Qwen-2.5-1.5B
+Fiction,3,0.625,0.375,8,Qwen-2.5-1.5B
+Fiction,4,0.625,0.25,8,Qwen-2.5-1.5B
+Fiction,5,0.75,0.125,8,Qwen-2.5-1.5B
+Health,0,0.5714285714285714,0.42857142857142855,7,Qwen-2.5-1.5B
+Health,1,0.8571428571428571,0.14285714285714285,7,Qwen-2.5-1.5B
+Health,2,0.5714285714285714,0.42857142857142855,7,Qwen-2.5-1.5B
+Health,3,0.5714285714285714,0.42857142857142855,7,Qwen-2.5-1.5B
+Health,4,0.42857142857142855,0.42857142857142855,7,Qwen-2.5-1.5B
+Health,5,0.2857142857142857,0.5714285714285714,7,Qwen-2.5-1.5B
+History,0,1.0,0.0,1,Qwen-2.5-1.5B
+History,1,0.0,1.0,1,Qwen-2.5-1.5B
+History,2,1.0,0.0,1,Qwen-2.5-1.5B
+History,3,1.0,0.0,1,Qwen-2.5-1.5B
+History,4,1.0,0.0,1,Qwen-2.5-1.5B
+History,5,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,0,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,1,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,2,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,3,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,4,0.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Location,5,1.0,0.0,1,Qwen-2.5-1.5B
+Indexical Error: Other,0,0.0,0.5,4,Qwen-2.5-1.5B
+Indexical Error: Other,1,0.0,0.25,4,Qwen-2.5-1.5B
+Indexical Error: Other,2,0.0,0.5,4,Qwen-2.5-1.5B
+Indexical Error: Other,3,0.0,0.5,4,Qwen-2.5-1.5B
+Indexical Error: Other,4,0.0,0.25,4,Qwen-2.5-1.5B
+Indexical Error: Other,5,0.0,0.5,4,Qwen-2.5-1.5B
+Indexical Error: Time,0,0.5,0.5,2,Qwen-2.5-1.5B
+Indexical Error: Time,1,0.5,0.5,2,Qwen-2.5-1.5B
+Indexical Error: Time,2,0.5,0.5,2,Qwen-2.5-1.5B
+Indexical Error: Time,3,0.5,0.5,2,Qwen-2.5-1.5B
+Indexical Error: Time,4,0.5,0.5,2,Qwen-2.5-1.5B
+Indexical Error: Time,5,0.0,0.5,2,Qwen-2.5-1.5B
+Language,0,0.5,0.5,2,Qwen-2.5-1.5B
+Language,1,0.5,0.5,2,Qwen-2.5-1.5B
+Language,2,0.5,0.5,2,Qwen-2.5-1.5B
+Language,3,0.5,0.5,2,Qwen-2.5-1.5B
+Language,4,1.0,0.0,2,Qwen-2.5-1.5B
+Language,5,0.5,0.5,2,Qwen-2.5-1.5B
+Law,0,0.5454545454545454,0.45454545454545453,11,Qwen-2.5-1.5B
+Law,1,0.6363636363636364,0.36363636363636365,11,Qwen-2.5-1.5B
+Law,2,0.6363636363636364,0.36363636363636365,11,Qwen-2.5-1.5B
+Law,3,0.7272727272727273,0.2727272727272727,11,Qwen-2.5-1.5B
+Law,4,0.6363636363636364,0.36363636363636365,11,Qwen-2.5-1.5B
+Law,5,0.5454545454545454,0.36363636363636365,11,Qwen-2.5-1.5B
+Logical Falsehood,0,0.0,1.0,2,Qwen-2.5-1.5B
+Logical Falsehood,1,0.5,0.5,2,Qwen-2.5-1.5B
+Logical Falsehood,2,0.5,0.5,2,Qwen-2.5-1.5B
+Logical Falsehood,3,0.5,0.5,2,Qwen-2.5-1.5B
+Logical Falsehood,4,0.0,1.0,2,Qwen-2.5-1.5B
+Logical Falsehood,5,0.5,0.5,2,Qwen-2.5-1.5B
+Misconceptions,0,0.625,0.375,8,Qwen-2.5-1.5B
+Misconceptions,1,0.5,0.5,8,Qwen-2.5-1.5B
+Misconceptions,2,0.625,0.375,8,Qwen-2.5-1.5B
+Misconceptions,3,0.625,0.25,8,Qwen-2.5-1.5B
+Misconceptions,4,0.5,0.5,8,Qwen-2.5-1.5B
+Misconceptions,5,0.375,0.625,8,Qwen-2.5-1.5B
+Misconceptions: Topical,0,1.0,0.0,1,Qwen-2.5-1.5B
+Misconceptions: Topical,1,1.0,0.0,1,Qwen-2.5-1.5B
+Misconceptions: Topical,2,1.0,0.0,1,Qwen-2.5-1.5B
+Misconceptions: Topical,3,1.0,0.0,1,Qwen-2.5-1.5B
+Misconceptions: Topical,4,1.0,0.0,1,Qwen-2.5-1.5B
+Misconceptions: Topical,5,1.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,0,0.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,1,0.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,2,0.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,3,0.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,4,0.0,0.0,1,Qwen-2.5-1.5B
+Misinformation,5,0.0,0.0,1,Qwen-2.5-1.5B
+Misquotations,0,0.3333333333333333,0.3333333333333333,3,Qwen-2.5-1.5B
+Misquotations,1,0.0,0.3333333333333333,3,Qwen-2.5-1.5B
+Misquotations,2,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Misquotations,3,0.3333333333333333,0.3333333333333333,3,Qwen-2.5-1.5B
+Misquotations,4,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Misquotations,5,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Myths and Fairytales,0,1.0,0.0,3,Qwen-2.5-1.5B
+Myths and Fairytales,1,1.0,0.0,3,Qwen-2.5-1.5B
+Myths and Fairytales,2,1.0,0.0,3,Qwen-2.5-1.5B
+Myths and Fairytales,3,1.0,0.0,3,Qwen-2.5-1.5B
+Myths and Fairytales,4,1.0,0.0,3,Qwen-2.5-1.5B
+Myths and Fairytales,5,1.0,0.0,3,Qwen-2.5-1.5B
+Nutrition,0,0.0,1.0,1,Qwen-2.5-1.5B
+Nutrition,1,0.0,1.0,1,Qwen-2.5-1.5B
+Nutrition,2,0.0,1.0,1,Qwen-2.5-1.5B
+Nutrition,3,0.0,1.0,1,Qwen-2.5-1.5B
+Nutrition,4,0.0,1.0,1,Qwen-2.5-1.5B
+Nutrition,5,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,0,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,1,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,2,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,3,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,4,0.0,1.0,1,Qwen-2.5-1.5B
+Paranormal,5,0.0,0.0,1,Qwen-2.5-1.5B
+Politics,0,0.0,1.0,1,Qwen-2.5-1.5B
+Politics,1,1.0,0.0,1,Qwen-2.5-1.5B
+Politics,2,1.0,0.0,1,Qwen-2.5-1.5B
+Politics,3,0.0,1.0,1,Qwen-2.5-1.5B
+Politics,4,1.0,0.0,1,Qwen-2.5-1.5B
+Politics,5,1.0,0.0,1,Qwen-2.5-1.5B
+Proverbs,0,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Proverbs,1,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Proverbs,2,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Proverbs,3,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Proverbs,4,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Proverbs,5,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Psychology,0,0.4,0.2,5,Qwen-2.5-1.5B
+Psychology,1,0.4,0.6,5,Qwen-2.5-1.5B
+Psychology,2,0.6,0.4,5,Qwen-2.5-1.5B
+Psychology,3,0.4,0.4,5,Qwen-2.5-1.5B
+Psychology,4,0.4,0.4,5,Qwen-2.5-1.5B
+Psychology,5,0.4,0.4,5,Qwen-2.5-1.5B
+Religion,0,0.0,1.0,1,Qwen-2.5-1.5B
+Religion,1,1.0,0.0,1,Qwen-2.5-1.5B
+Religion,2,1.0,0.0,1,Qwen-2.5-1.5B
+Religion,3,0.0,1.0,1,Qwen-2.5-1.5B
+Religion,4,0.0,1.0,1,Qwen-2.5-1.5B
+Religion,5,0.0,1.0,1,Qwen-2.5-1.5B
+Science,0,0.0,1.0,1,Qwen-2.5-1.5B
+Science,1,0.0,1.0,1,Qwen-2.5-1.5B
+Science,2,1.0,0.0,1,Qwen-2.5-1.5B
+Science,3,1.0,0.0,1,Qwen-2.5-1.5B
+Science,4,1.0,0.0,1,Qwen-2.5-1.5B
+Science,5,1.0,0.0,1,Qwen-2.5-1.5B
+Sociology,0,0.0,1.0,6,Qwen-2.5-1.5B
+Sociology,1,0.16666666666666666,0.8333333333333334,6,Qwen-2.5-1.5B
+Sociology,2,0.16666666666666666,0.8333333333333334,6,Qwen-2.5-1.5B
+Sociology,3,0.0,1.0,6,Qwen-2.5-1.5B
+Sociology,4,0.3333333333333333,0.6666666666666666,6,Qwen-2.5-1.5B
+Sociology,5,0.3333333333333333,0.6666666666666666,6,Qwen-2.5-1.5B
+Statistics,0,1.0,0.0,1,Qwen-2.5-1.5B
+Statistics,1,1.0,0.0,1,Qwen-2.5-1.5B
+Statistics,2,1.0,0.0,1,Qwen-2.5-1.5B
+Statistics,3,1.0,0.0,1,Qwen-2.5-1.5B
+Statistics,4,0.0,1.0,1,Qwen-2.5-1.5B
+Statistics,5,1.0,0.0,1,Qwen-2.5-1.5B
+Stereotypes,0,1.0,0.0,3,Qwen-2.5-1.5B
+Stereotypes,1,1.0,0.0,3,Qwen-2.5-1.5B
+Stereotypes,2,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Stereotypes,3,1.0,0.0,3,Qwen-2.5-1.5B
+Stereotypes,4,1.0,0.0,3,Qwen-2.5-1.5B
+Stereotypes,5,0.6666666666666666,0.0,3,Qwen-2.5-1.5B
+Subjective,0,0.5,0.5,2,Qwen-2.5-1.5B
+Subjective,1,0.5,0.5,2,Qwen-2.5-1.5B
+Subjective,2,0.5,0.5,2,Qwen-2.5-1.5B
+Subjective,3,0.5,0.5,2,Qwen-2.5-1.5B
+Subjective,4,0.5,0.5,2,Qwen-2.5-1.5B
+Subjective,5,0.5,0.5,2,Qwen-2.5-1.5B
+Superstitions,0,0.0,1.0,2,Qwen-2.5-1.5B
+Superstitions,1,0.0,1.0,2,Qwen-2.5-1.5B
+Superstitions,2,0.0,1.0,2,Qwen-2.5-1.5B
+Superstitions,3,0.0,1.0,2,Qwen-2.5-1.5B
+Superstitions,4,0.0,1.0,2,Qwen-2.5-1.5B
+Superstitions,5,0.5,0.5,2,Qwen-2.5-1.5B
+Weather,0,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
+Weather,1,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Weather,2,0.0,1.0,3,Qwen-2.5-1.5B
+Weather,3,0.3333333333333333,0.6666666666666666,3,Qwen-2.5-1.5B
+Weather,4,0.6666666666666666,0.3333333333333333,3,Qwen-2.5-1.5B
+Weather,5,0.0,0.6666666666666666,3,Qwen-2.5-1.5B
