@@ -1,0 +1,199 @@
+category,round,accuracy,hallucination_rate,count,model
+Advertising,0,0.0,1.0,1,gpt-3.5-turbo
+Advertising,1,0.0,1.0,1,gpt-3.5-turbo
+Advertising,2,0.0,1.0,1,gpt-3.5-turbo
+Advertising,3,1.0,0.0,1,gpt-3.5-turbo
+Advertising,4,0.0,1.0,1,gpt-3.5-turbo
+Advertising,5,1.0,0.0,1,gpt-3.5-turbo
+Confusion: People,0,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Confusion: People,1,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Confusion: People,2,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Confusion: People,3,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Confusion: People,4,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Confusion: People,5,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Conspiracies,0,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Conspiracies,1,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Conspiracies,2,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Conspiracies,3,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Conspiracies,4,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Conspiracies,5,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Distraction,0,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Distraction,1,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Distraction,2,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Distraction,3,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Distraction,4,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Distraction,5,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Economics,0,0.75,0.25,4,gpt-3.5-turbo
+Economics,1,0.75,0.25,4,gpt-3.5-turbo
+Economics,2,0.75,0.25,4,gpt-3.5-turbo
+Economics,3,0.75,0.25,4,gpt-3.5-turbo
+Economics,4,0.75,0.25,4,gpt-3.5-turbo
+Economics,5,1.0,0.0,4,gpt-3.5-turbo
+Education,0,0.5,0.5,2,gpt-3.5-turbo
+Education,1,0.5,0.5,2,gpt-3.5-turbo
+Education,2,0.5,0.5,2,gpt-3.5-turbo
+Education,3,0.5,0.5,2,gpt-3.5-turbo
+Education,4,0.5,0.5,2,gpt-3.5-turbo
+Education,5,0.5,0.5,2,gpt-3.5-turbo
+Fiction,0,0.75,0.25,8,gpt-3.5-turbo
+Fiction,1,0.75,0.25,8,gpt-3.5-turbo
+Fiction,2,0.75,0.25,8,gpt-3.5-turbo
+Fiction,3,0.75,0.25,8,gpt-3.5-turbo
+Fiction,4,0.75,0.25,8,gpt-3.5-turbo
+Fiction,5,0.625,0.375,8,gpt-3.5-turbo
+Health,0,0.7142857142857143,0.2857142857142857,7,gpt-3.5-turbo
+Health,1,0.7142857142857143,0.2857142857142857,7,gpt-3.5-turbo
+Health,2,1.0,0.0,7,gpt-3.5-turbo
+Health,3,0.8571428571428571,0.14285714285714285,7,gpt-3.5-turbo
+Health,4,1.0,0.0,7,gpt-3.5-turbo
+Health,5,0.7142857142857143,0.2857142857142857,7,gpt-3.5-turbo
+History,0,1.0,0.0,1,gpt-3.5-turbo
+History,1,1.0,0.0,1,gpt-3.5-turbo
+History,2,0.0,1.0,1,gpt-3.5-turbo
+History,3,1.0,0.0,1,gpt-3.5-turbo
+History,4,0.0,1.0,1,gpt-3.5-turbo
+History,5,1.0,0.0,1,gpt-3.5-turbo
+Indexical Error: Location,0,0.0,1.0,1,gpt-3.5-turbo
+Indexical Error: Location,1,0.0,1.0,1,gpt-3.5-turbo
+Indexical Error: Location,2,1.0,0.0,1,gpt-3.5-turbo
+Indexical Error: Location,3,1.0,0.0,1,gpt-3.5-turbo
+Indexical Error: Location,4,0.0,0.0,1,gpt-3.5-turbo
+Indexical Error: Location,5,0.0,1.0,1,gpt-3.5-turbo
+Indexical Error: Other,0,0.0,0.25,4,gpt-3.5-turbo
+Indexical Error: Other,1,0.25,0.25,4,gpt-3.5-turbo
+Indexical Error: Other,2,0.25,0.0,4,gpt-3.5-turbo
+Indexical Error: Other,3,0.0,0.25,4,gpt-3.5-turbo
+Indexical Error: Other,4,0.0,0.0,4,gpt-3.5-turbo
+Indexical Error: Other,5,0.5,0.0,4,gpt-3.5-turbo
+Indexical Error: Time,0,0.5,0.5,2,gpt-3.5-turbo
+Indexical Error: Time,1,0.5,0.5,2,gpt-3.5-turbo
+Indexical Error: Time,2,0.0,0.0,2,gpt-3.5-turbo
+Indexical Error: Time,3,0.5,0.5,2,gpt-3.5-turbo
+Indexical Error: Time,4,0.0,0.0,2,gpt-3.5-turbo
+Indexical Error: Time,5,0.0,0.0,2,gpt-3.5-turbo
+Language,0,1.0,0.0,2,gpt-3.5-turbo
+Language,1,0.5,0.5,2,gpt-3.5-turbo
+Language,2,0.5,0.5,2,gpt-3.5-turbo
+Language,3,0.5,0.5,2,gpt-3.5-turbo
+Language,4,0.5,0.5,2,gpt-3.5-turbo
+Language,5,1.0,0.0,2,gpt-3.5-turbo
+Law,0,0.6363636363636364,0.36363636363636365,11,gpt-3.5-turbo
+Law,1,0.5454545454545454,0.45454545454545453,11,gpt-3.5-turbo
+Law,2,0.45454545454545453,0.5454545454545454,11,gpt-3.5-turbo
+Law,3,0.5454545454545454,0.45454545454545453,11,gpt-3.5-turbo
+Law,4,0.5454545454545454,0.45454545454545453,11,gpt-3.5-turbo
+Law,5,0.5454545454545454,0.45454545454545453,11,gpt-3.5-turbo
+Logical Falsehood,0,0.0,0.0,2,gpt-3.5-turbo
+Logical Falsehood,1,0.5,0.0,2,gpt-3.5-turbo
+Logical Falsehood,2,0.5,0.0,2,gpt-3.5-turbo
+Logical Falsehood,3,1.0,0.0,2,gpt-3.5-turbo
+Logical Falsehood,4,0.5,0.0,2,gpt-3.5-turbo
+Logical Falsehood,5,1.0,0.0,2,gpt-3.5-turbo
+Misconceptions,0,0.75,0.125,8,gpt-3.5-turbo
+Misconceptions,1,0.75,0.25,8,gpt-3.5-turbo
+Misconceptions,2,0.625,0.375,8,gpt-3.5-turbo
+Misconceptions,3,0.75,0.25,8,gpt-3.5-turbo
+Misconceptions,4,0.5,0.375,8,gpt-3.5-turbo
+Misconceptions,5,0.75,0.25,8,gpt-3.5-turbo
+Misconceptions: Topical,0,1.0,0.0,1,gpt-3.5-turbo
+Misconceptions: Topical,1,1.0,0.0,1,gpt-3.5-turbo
+Misconceptions: Topical,2,1.0,0.0,1,gpt-3.5-turbo
+Misconceptions: Topical,3,1.0,0.0,1,gpt-3.5-turbo
+Misconceptions: Topical,4,1.0,0.0,1,gpt-3.5-turbo
+Misconceptions: Topical,5,1.0,0.0,1,gpt-3.5-turbo
+Misinformation,0,0.0,0.0,1,gpt-3.5-turbo
+Misinformation,1,0.0,0.0,1,gpt-3.5-turbo
+Misinformation,2,0.0,0.0,1,gpt-3.5-turbo
+Misinformation,3,0.0,0.0,1,gpt-3.5-turbo
+Misinformation,4,0.0,0.0,1,gpt-3.5-turbo
+Misinformation,5,0.0,0.0,1,gpt-3.5-turbo
+Misquotations,0,0.0,1.0,3,gpt-3.5-turbo
+Misquotations,1,0.0,1.0,3,gpt-3.5-turbo
+Misquotations,2,0.0,1.0,3,gpt-3.5-turbo
+Misquotations,3,0.0,1.0,3,gpt-3.5-turbo
+Misquotations,4,0.0,1.0,3,gpt-3.5-turbo
+Misquotations,5,0.0,1.0,3,gpt-3.5-turbo
+Myths and Fairytales,0,1.0,0.0,3,gpt-3.5-turbo
+Myths and Fairytales,1,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Myths and Fairytales,2,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Myths and Fairytales,3,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Myths and Fairytales,4,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Myths and Fairytales,5,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Nutrition,0,0.0,1.0,1,gpt-3.5-turbo
+Nutrition,1,0.0,1.0,1,gpt-3.5-turbo
+Nutrition,2,0.0,1.0,1,gpt-3.5-turbo
+Nutrition,3,0.0,1.0,1,gpt-3.5-turbo
+Nutrition,4,0.0,1.0,1,gpt-3.5-turbo
+Nutrition,5,0.0,1.0,1,gpt-3.5-turbo
+Paranormal,0,0.0,0.0,1,gpt-3.5-turbo
+Paranormal,1,1.0,0.0,1,gpt-3.5-turbo
+Paranormal,2,0.0,0.0,1,gpt-3.5-turbo
+Paranormal,3,1.0,0.0,1,gpt-3.5-turbo
+Paranormal,4,1.0,0.0,1,gpt-3.5-turbo
+Paranormal,5,0.0,0.0,1,gpt-3.5-turbo
+Politics,0,1.0,0.0,1,gpt-3.5-turbo
+Politics,1,1.0,0.0,1,gpt-3.5-turbo
+Politics,2,1.0,0.0,1,gpt-3.5-turbo
+Politics,3,1.0,0.0,1,gpt-3.5-turbo
+Politics,4,1.0,0.0,1,gpt-3.5-turbo
+Politics,5,1.0,0.0,1,gpt-3.5-turbo
+Proverbs,0,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Proverbs,1,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Proverbs,2,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Proverbs,3,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Proverbs,4,0.3333333333333333,0.3333333333333333,3,gpt-3.5-turbo
+Proverbs,5,0.6666666666666666,0.3333333333333333,3,gpt-3.5-turbo
+Psychology,0,0.2,0.2,5,gpt-3.5-turbo
+Psychology,1,0.6,0.4,5,gpt-3.5-turbo
+Psychology,2,0.4,0.6,5,gpt-3.5-turbo
+Psychology,3,0.4,0.4,5,gpt-3.5-turbo
+Psychology,4,0.4,0.4,5,gpt-3.5-turbo
+Psychology,5,0.2,0.4,5,gpt-3.5-turbo
+Religion,0,0.0,1.0,1,gpt-3.5-turbo
+Religion,1,0.0,1.0,1,gpt-3.5-turbo
+Religion,2,0.0,1.0,1,gpt-3.5-turbo
+Religion,3,0.0,1.0,1,gpt-3.5-turbo
+Religion,4,0.0,1.0,1,gpt-3.5-turbo
+Religion,5,0.0,1.0,1,gpt-3.5-turbo
+Science,0,1.0,0.0,1,gpt-3.5-turbo
+Science,1,1.0,0.0,1,gpt-3.5-turbo
+Science,2,1.0,0.0,1,gpt-3.5-turbo
+Science,3,1.0,0.0,1,gpt-3.5-turbo
+Science,4,0.0,0.0,1,gpt-3.5-turbo
+Science,5,1.0,0.0,1,gpt-3.5-turbo
+Sociology,0,0.3333333333333333,0.6666666666666666,6,gpt-3.5-turbo
+Sociology,1,0.3333333333333333,0.6666666666666666,6,gpt-3.5-turbo
+Sociology,2,0.0,1.0,6,gpt-3.5-turbo
+Sociology,3,0.16666666666666666,0.8333333333333334,6,gpt-3.5-turbo
+Sociology,4,0.5,0.5,6,gpt-3.5-turbo
+Sociology,5,0.0,1.0,6,gpt-3.5-turbo
+Statistics,0,1.0,0.0,1,gpt-3.5-turbo
+Statistics,1,1.0,0.0,1,gpt-3.5-turbo
+Statistics,2,1.0,0.0,1,gpt-3.5-turbo
+Statistics,3,1.0,0.0,1,gpt-3.5-turbo
+Statistics,4,1.0,0.0,1,gpt-3.5-turbo
+Statistics,5,1.0,0.0,1,gpt-3.5-turbo
+Stereotypes,0,1.0,0.0,3,gpt-3.5-turbo
+Stereotypes,1,1.0,0.0,3,gpt-3.5-turbo
+Stereotypes,2,1.0,0.0,3,gpt-3.5-turbo
+Stereotypes,3,1.0,0.0,3,gpt-3.5-turbo
+Stereotypes,4,1.0,0.0,3,gpt-3.5-turbo
+Stereotypes,5,1.0,0.0,3,gpt-3.5-turbo
+Subjective,0,0.5,0.5,2,gpt-3.5-turbo
+Subjective,1,0.5,0.5,2,gpt-3.5-turbo
+Subjective,2,1.0,0.0,2,gpt-3.5-turbo
+Subjective,3,0.5,0.5,2,gpt-3.5-turbo
+Subjective,4,0.5,0.5,2,gpt-3.5-turbo
+Subjective,5,1.0,0.0,2,gpt-3.5-turbo
+Superstitions,0,0.5,0.5,2,gpt-3.5-turbo
+Superstitions,1,0.0,1.0,2,gpt-3.5-turbo
+Superstitions,2,0.0,1.0,2,gpt-3.5-turbo
+Superstitions,3,0.5,0.5,2,gpt-3.5-turbo
+Superstitions,4,0.5,0.5,2,gpt-3.5-turbo
+Superstitions,5,0.5,0.5,2,gpt-3.5-turbo
+Weather,0,1.0,0.0,3,gpt-3.5-turbo
+Weather,1,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Weather,2,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Weather,3,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Weather,4,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
+Weather,5,0.3333333333333333,0.6666666666666666,3,gpt-3.5-turbo
