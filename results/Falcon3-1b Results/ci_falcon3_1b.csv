@@ -1,0 +1,13 @@
+model,round,round_label,metric,point,ci_lo,ci_hi,n
+Falcon3-1B,0,Baseline,accuracy,0.41,0.31,0.51,100
+Falcon3-1B,1,Round 1,accuracy,0.44,0.34,0.54,100
+Falcon3-1B,2,Round 2,accuracy,0.42,0.32,0.51,100
+Falcon3-1B,3,Round 3,accuracy,0.5,0.4,0.6,100
+Falcon3-1B,4,Round 4,accuracy,0.45,0.35,0.55,100
+Falcon3-1B,5,Round 5,accuracy,0.44,0.34,0.54,100
+Falcon3-1B,0,Baseline,hallucination_rate,0.49,0.39,0.59,100
+Falcon3-1B,1,Round 1,hallucination_rate,0.52,0.42,0.62,100
+Falcon3-1B,2,Round 2,hallucination_rate,0.51,0.41975,0.61,100
+Falcon3-1B,3,Round 3,hallucination_rate,0.41,0.31,0.51,100
+Falcon3-1B,4,Round 4,hallucination_rate,0.49,0.39,0.59,100
+Falcon3-1B,5,Round 5,hallucination_rate,0.44,0.34,0.54,100
