@@ -1,7 +1,6 @@
 # Hallucination Under Contextual and Semantic Drift in Large Language Models
 
 **Authors:** Ryan Han, Vincent Qiu, Terence Xu
-**Course:** DS-UA 301 — Advanced Topics in Data Science, NYU
 
 
 This repository contains the code, data, and results for our 12-week class project investigating how progressive context perturbations affect hallucination behavior in instruction-tuned LLMs on the TruthfulQA benchmark.
