@@ -1,71 +1,193 @@
-# Understanding Contextual Drift in LLMs
+# Hallucination Under Contextual and Semantic Drift in Large Language Models
 
-Authors: Vincent Qiu, Ryan Han, Terence Xu
+**Authors:** Ryan Han, Vincent Qiu, Terence Xu
+**Course:** DS-UA 301 — Advanced Topics in Data Science, NYU
+
+
+This repository contains the code, data, and results for our 12-week class project investigating how progressive context perturbations affect hallucination behavior in instruction-tuned LLMs on the TruthfulQA benchmark.
+
+**Headline finding.** Across four models (GPT-3.5 Turbo, Llama-3.2-1B, Qwen-2.5-1.5B, Falcon3-1B) and two qualitatively different drift paradigms — totalling **4,800 model queries** — we find no statistically significant hallucination increase under context drift. We interpret this as evidence that instruction-tuning hardens models against shallow context perturbations and that adversarial-misconception benchmarks like TruthfulQA are dominated by pretraining biases rather than prompt-level signal.
+
+---
 
 ## Motivation
 
-Hallucinations in large language models (LLMs) present a significant challenge to their reliable deployment in high-stakes domains where incorrect or fabricated information can lead to serious consequences. These hallucinations arise when models generate responses that are seemingly plausible but are factually incorrect, unsupported by the provided context, or inconsistent with established knowledge. Prior research has shown that hallucinations can emerge from multiple sources, including training data biases, misaligned reasoning processes, and contextual perturbations during inference. As LLMs become increasingly integrated into real-world decision-making systems, understanding the underlying mechanisms that cause hallucinations is critical for improving model reliability and trustworthiness. 
+Hallucinations in large language models present a significant challenge to their reliable deployment in high-stakes domains where incorrect or fabricated information can lead to serious consequences. They arise when models generate responses that are plausible but factually incorrect, unsupported by the provided context, or inconsistent with established knowledge. Prior research has shown they emerge from multiple sources, including training-data biases, misaligned reasoning, and contextual perturbations during inference.
 
-Existing work in this area has primarily focused on developing diagnostic frameworks to detect contextual drift and hallucination after they occur and often stop short of identifying strategies for preventing such failures. In this project, we aim to move beyond purely diagnostic analysis by combining controlled contextual perturbations with established evaluation benchmarks. Our work seeks to explore interventional strategies—such as retrieval-augmented grounding and drift-aware prompting techniques—that aim to mitigate hallucination by reinforcing reliance on relevant context. Through this approach, our goal is to better characterize the mechanisms behind contextual drift and hallucination and also to develop practical methods for improving the robustness and reliability of large language models in real-world applications.
+Existing work has primarily focused on developing **diagnostic** frameworks to detect hallucination after it occurs, and often stops short of robust cross-model, cross-paradigm evaluation. Most "LLMs hallucinate under X" claims are based on a single model, a single drift paradigm, and scoring that does not survive close inspection. In this project we set out to characterize the relationship between contextual drift and hallucination with **multi-model, multi-paradigm, paired-statistical evaluation on an adversarial-truthfulness benchmark using a semantic-similarity scorer**. The negative result we report is, we believe, the more honest answer.
 
-## Related Works
+---
 
-Some of the related works we have been studying stem from our TA Satyapragnya, which we are thankful for.
+## Related Work
+
+The two papers our experimental design draws from are listed below. Both inspired one of our two experiments.
 
 ### Natural Context Drift Undermines the Natural Language Understanding of Large Language Models (Wu et al., 2025)
 
-Wu, Y., Schlegel, V., & Batista-Navarro, R. (2025, September 1). Natural context drift undermines the natural language understanding of large language models. arXiv.org. https://arxiv.org/abs/2509.01093 
+Wu, Y., Schlegel, V., & Batista-Navarro, R. (2025). *Natural context drift undermines the natural language understanding of large language models.* arXiv:2509.01093. https://arxiv.org/abs/2509.01093
 
-Methods: 
+**Methods.** Wu et al. propose a framework to study how natural contextual drift affects the reading-comprehension ability of LLMs. They leverage Wikipedia revision histories to collect human-edited versions of passages used in existing QA benchmarks, compare edited and original versions via semantic similarity, and evaluate model performance across similarity ranges.
 
-Wu et al. propose a framework to study how natural contextual drift affects the reading comprehension ability of large language models. Their method leverages Wikipedia revision histories to collect human-edited versions of passages used in existing QA benchmarks. These edited passages are compared with the original versions during model pretraining by computing semantic similarity scores. Model performance is then evaluated across different similarity ranges to measure how accuracy changes as the contextual passage increasingly diverges from the version seen during training. 
+**Why we used it.** Their use of Wikipedia revisions as a natural-drift signal directly inspired our Experiment 2.
 
-Strengths:  
-
-A key strength of this approach is that it evaluates contextual drift using naturally occurring textual changes, rather than synthetic perturbations. This provides a realistic setting for analyzing how LLMs handle evolving information in real-world environments. The study also analyzes multiple QA benchmarks and models, demonstrating a consistent relationship between decreasing semantic similarity and declining model performance. 
-
-Limitations: 
-
-However, the study focuses primarily on open-source models with accessible training corpora, which may not reflect the behavior of more advanced proprietary systems. Additionally, the experiments are limited to question-answering tasks, leaving open the question of whether similar contextual drift effects occur in other LLM applications such as dialogue generation or reasoning tasks. 
+**Limitation we wanted to extend.** Their evaluation is on NLU reading-comprehension tasks; it is not run on adversarial-truthfulness benchmarks like TruthfulQA where the failure mode is reproducing misconceptions rather than mis-comprehending text.
 
 ### Shadows in the Attention: Contextual Perturbation and Representation Drift in the Dynamics of Hallucination in LLMs (Wei et al., 2025)
 
-Wei, Z., Wang, S., Rong, X., Liu, X., & Li, H. (2025, May 22). Shadows in the attention: Contextual perturbation and representation drift in the dynamics of hallucination in llms. arXiv.org. https://arxiv.org/abs/2505.16894 
+Wei, Z., Wang, S., Rong, X., Liu, X., & Li, H. (2025). *Shadows in the attention: Contextual perturbation and representation drift in the dynamics of hallucination in LLMs.* arXiv:2505.16894. https://arxiv.org/abs/2505.16894
 
-Methods: 
+**Methods.** Wei et al. investigate how contextual perturbations influence hallucination using TruthfulQA. They use a multi-round context injection framework where each question undergoes incremental context augmentation along two tracks (relevant-but-misleading vs. irrelevant-distraction) and track hallucination alongside hidden-state and attention dynamics.
 
-Wei et al. investigate how contextual perturbations influence hallucination behavior in LLMs using the TruthfulQA benchmark. Their methodology introduces a multi-round context injection framework, where each question undergoes up to 15 rounds of incremental context augmentation. Two experimental tracks are used: one injects semantically relevant but partially misleading information, while the other introduces irrelevant distraction snippets. The study tracks hallucination rates alongside internal model dynamics, including changes in hidden representations and attention distributions, to identify correlations between contextual interference and hallucination generation. 
+**Why we used it.** Their multi-round context-injection design directly inspired our Experiment 1, which we generalised to six rounds spanning a relevance-to-distraction gradient.
 
-Strengths: 
+**Limitation we wanted to extend.** Single model, mechanism-focused, and primarily diagnostic. We extended to four models, added a second drift paradigm, and added paired statistical testing.
 
-This work provides a detailed analysis of hallucination mechanisms by combining observable hallucination metrics with internal model representation analysis. By monitoring hidden-state drift and attention patterns, the study offers insights into how contextual perturbations gradually shift model reasoning and lead to hallucinated outputs. 
-
-Limitations:
-
-Despite its detailed mechanistic analysis, the study primarily focuses on diagnosing hallucination behavior rather than proposing mitigation strategies. Furthermore, the injected contexts are synthetically constructed, which may not fully capture the complexity of real-world contextual drift such as naturally evolving text sources. 
+---
 
 ## Methodology
 
-In order to extend prior work on contextual drift and hallucination generation in LLMs, our methodology integrates the frameworks proposed in two studies. The first investigates how natural textual evolution, such as revisions to Wikipedia articles, causes semantic divergence between evaluation inputs and the content originally seen during model pretraining. The second examines how repeated injections of relevant and irrelevant contextual information can perturb internal model representations, leading to hallucinated outputs. Building on these insights, we propose a unified experimental framework in which semantically related Wikipedia passages are progressively injected into an LLM’s context window across multiple rounds. Each round introduces passages with increasing semantic distance from the original source article, simulating a controlled form of natural contextual drift while also introducing structured context perturbations. By tracking model responses, hallucination rates, and semantic alignment with ground truth answers across these rounds, we aim to identify the threshold at which contextual divergence begins to induce hallucinations. 
+We run two experiments on the same 100-question TruthfulQA subsample. Both experiments share the same scorer, the same statistical tests, and the same four models, so within-model and cross-paradigm comparisons are paired at the question level.
 
-This setup allows us to analyze the relationship between semantic drift and hallucination formation, while also evaluating whether early detection signals, such as semantic deviation or confidence shifts, can be used to prevent hallucinations before they occur. Furthermore, we extend the evaluation to larger state-of-the-art models, including modern proprietary and open-source architectures, to determine whether contextual robustness scales with model capability.
+### Experiment 1 — Prompt-template context injection
 
-### Plans for Further Work
+For each question, we evaluate six conditions (Rounds 0–5):
+- **R0 (baseline):** no context.
+- **R1 — relevant grounding:** a factual framing referencing the question's TruthfulQA category.
+- **R2 — ambiguous context:** acknowledges both evidence-based and popular beliefs.
+- **R3 — tangential context:** cross-domain framing.
+- **R4 — misconception-reinforcing:** explicitly endorses "the commonly accepted answer."
+- **R5 — irrelevant distraction:** a fabricated passage about ambient temperature and analog clocks.
 
-So far, we have gathered metrics for three models: Falcon3-1B, GPT 3.5 Turbo, and Llama3-8B. We plan on testing on the other models mentioned in Wu et. al's paper: Qwen2.5-1.5B, Qwen2.5-7B, Falcon3-7B, Llama3.2-1B
+Same prompts for all four models so cross-model differences are attributable to the model.
 
-After replication, we plan on continuing with semantic drift instead of context drift, to see if that also causes the model to hallucinate.
+### Experiment 2 — Temporal Wikipedia revision drift
+
+For each question we (i) query Wikipedia for the most relevant article, (ii) fetch up to 50 historical revisions via the MediaWiki API, (iii) clean wikitext, (iv) sample five revisions at evenly-spaced chronological indices (R1 = newest, R5 = oldest). Each revision is injected as context. Revisions are fetched once and persisted to a JSON cache so subsequent model runs reuse the same contexts.
+
+### Truthfulness scoring
+
+We use sentence-embedding cosine similarity (`all-MiniLM-L6-v2`) against TruthfulQA's correct and incorrect answer pools:
+- s⁺ = max cos(response, correct_i)
+- s⁻ = max cos(response, incorrect_j)
+- **correct** if s⁺ ≥ τ and s⁺ > s⁻
+- **hallucinated** if s⁻ ≥ τ and s⁻ > s⁺
+- threshold τ = 0.55 (calibrated on a 20-response sample)
+- continuous truth margin = s⁺ − s⁻
+
+This replaces the substring-matching scorer used in our Milestone 2 pipeline, which produced a near-floor accuracy artefact (8–11%). The semantic scorer lifts baseline accuracy to 41–55% — confirming the floor was a measurement artefact, not a model property.
+
+### Statistical analysis
+
+Because the same 100 questions are evaluated under every round, each round-vs.-baseline comparison is a paired binary outcome. We use **McNemar's exact binomial test** on the discordant pairs and report **bootstrap 95% confidence intervals** (2,000 resamples) on per-round accuracy and hallucination rate.
+
+---
+
+## Models Evaluated
+
+| Model | Size | Backend |
+|---|---|---|
+| GPT-3.5 Turbo | ~175B | OpenAI Chat Completions API |
+| Llama-3.2-1B-Instruct | 1B | Local, Colab T4 / fp16 |
+| Qwen-2.5-1.5B-Instruct | 1.5B | Local, Colab T4 / fp16 |
+| Falcon3-1B-Instruct | 1B | Local, Colab T4 / fp16 |
+
+All models are queried at `temperature=0` with a max of 200 generated tokens. We initially planned to also run 7–8B open-source models (Llama-3-8B, Qwen-2.5-7B, Falcon3-7B) via the HuggingFace Inference Router, but free-tier quota limits and Colab T4 memory both made full 600-row runs infeasible. We treat the 1–2B scale as our open-source comparison tier.
+
+---
 
 ## Datasets
 
-Our study primarily utilizes the TruthfulQA benchmark in combination with Wikipedia revision histories to analyze hallucination behavior under controlled contextual drift conditions. These datasets complement each other by providing both structured evaluation questions and naturally evolving textual context. 
+**TruthfulQA** (Lin et al., 2022) — 817 question–answer pairs across 38 categories, specifically designed to elicit incorrect but plausible responses. We sample 100 questions across 33 categories with `seed=42` and reuse this subset across every model and every experiment.
 
-TruthfulQA serves as the primary evaluation dataset. It consists of 817 question–answer pairs spanning 38 categories, including misconceptions, law, health, sociology, and other domains where language models are prone to producing incorrect but plausible responses. The benchmark was specifically designed to test whether language models generate truthful answers or instead reproduce common misconceptions and false beliefs. 
+**Wikipedia revision histories** — fetched on-the-fly via the MediaWiki `action=query&prop=revisions` API. For each TruthfulQA question, we identify the most relevant article via the Wikipedia search API, then fetch up to 50 revisions. Revisions shorter than 300 characters are discarded; the remainder are cleaned of wikitext markup and capped at 3,500 characters per revision before injection.
 
-To simulate contextual drift, we complement the TruthfulQA benchmark with passages derived from Wikipedia article revision histories. Wikipedia provides a naturally evolving corpus where article content changes over time due to edits, updates, and corrections. These revisions offer a realistic source of semantically shifting context that allows us to examine how language models respond when presented with information that gradually diverges from previously seen content.
+---
 
-### Justification
+## Repository Layout
 
-This experimental framework allows us to directly analyze the relationship between contextual drift and hallucination formation. TruthfulQA provides a reliable benchmark for detecting hallucinations because it explicitly captures questions that models often answer incorrectly due to misconceptions. Meanwhile, Wikipedia revisions and semantically distant passages provide a realistic and scalable source of contextual perturbations. Together, these datasets enable a controlled yet realistic environment for studying how contextual noise accumulates across multiple conversational turns. 
+```
+ATDS_Milestone_2.ipynb              # Experiment 1 — prompt-template injection (final version)
+ATDS_Semantic_Drift.ipynb           # Experiment 2 — Wikipedia revision drift
 
-During the exploratory data analysis (EDA) phase, we will analyze and visualize the relationship between three key variables: turn number, semantic similarity of injected context, and model hallucination rate. By tracking these factors across experimental runs, we aim to identify the conditions under which contextual drift most strongly affects model reasoning and evaluate the effectiveness of mitigation strategies such as retrieval augmentation and prompt-based grounding techniques. 
+results_<model>.csv                 # Per-row Experiment 1 results
+results_temporal_<model>.csv        # Per-row Experiment 2 results
+summary_<model>.csv                 # Round-level aggregates (Experiment 1)
+ci_<model>.csv                      # Bootstrap 95% CIs (Experiment 1)
+mcnemar_acc_<model>.csv             # McNemar tests, accuracy (Experiment 1)
+mcnemar_halluc_<model>.csv          # McNemar tests, hallucination (Experiment 1)
+category_<model>.csv                # Per-category breakdown (Experiment 1)
+
+drift_analysis_<model>.png          # Accuracy & hallucination with 95% CIs
+truth_margin_<model>.png            # Truth-margin violin plots
+category_heatmap_<model>.png        # Per-category accuracy × round heatmap
+
+<model> tags: gpt35, llama32_1b, qwen25_1_5b, falcon3_1b
+```
+
+---
+
+## Key Results
+
+### Experiment 1 — Prompt-template injection
+
+| Model | Baseline acc | R1–R5 acc range | Baseline halluc | R1–R5 halluc range |
+|---|---|---|---|---|
+| GPT-3.5 Turbo  | 0.55 | 0.49–0.56 | 0.34 | 0.36–0.43 |
+| Llama-3.2-1B   | 0.47 | 0.43–0.53 | 0.43 | 0.36–0.44 |
+| Qwen-2.5-1.5B  | 0.41 | 0.44–0.49 | 0.51 | 0.43–0.47 |
+| Falcon3-1B     | 0.41 | 0.42–0.50 | 0.49 | 0.41–0.52 |
+
+Of 40 paired McNemar tests (4 models × 5 rounds × 2 metrics), only 2 reach α=0.05 — both showing accuracy *improving* relative to baseline under injection.
+
+### Experiment 2 — Wikipedia revision drift
+
+| Model | Baseline acc | R1–R5 acc range | Notes |
+|---|---|---|---|
+| GPT-3.5 Turbo  | 0.55 | 0.52–0.59 | Best round = R5 (oldest revision) |
+| Llama-3.2-1B   | 0.57 | 0.46–0.50 | Flat 7–11 pt drop, not monotone with age |
+| Qwen-2.5-1.5B  | 0.50 | 0.46–0.51 | Indistinguishable from baseline |
+| Falcon3-1B     | 0.46 | 0.39–0.43 | Mild decline paired with *lower* hallucination |
+
+Zero of 20 McNemar accuracy tests reach α=0.05.
+
+---
+
+## Why Drift Doesn't Move the Needle
+
+Three reinforcing explanations, discussed in detail in the final report:
+
+1. **Pretraining beats prompts.** TruthfulQA targets memorised misconceptions. Errors live in the weights, and prompt-level context can't edit weights.
+2. **Instruction-tuned models hedge.** Under noisy context, RLHF-trained models abstain rather than confabulate, landing in the "ambiguous" bucket — neither correct nor hallucinated.
+3. **The drift signal is too soft.** Even the oldest Wikipedia revision of most TruthfulQA articles is factually correct; TruthfulQA contains very few questions whose true answer has changed over time.
+
+---
+
+## Limitations & Future Work
+
+**Limitations.** (1) n=100 gives ±8–10 pt CIs — limited power for small effects. (2) Open-source models capped at 1–2B due to quota/memory constraints. (3) Round number is a noisy proxy for true semantic distance. (4) TruthfulQA is the regime *least* sensitive to prompt-level drift.
+
+**Future work.** (i) Full TruthfulQA-817 on 7–8B open-source models, ideally on NYU HPC. (ii) Continuous semantic-distance covariate fit with a GLMM. (iii) FreshQA or similar recency-sensitive benchmarks where temporal drift should actually bite. (iv) Mechanistic layer for the open-source models — attention to injected context, per-token entropy.
+
+---
+
+## How to Reproduce
+
+1. Open `ATDS_Milestone_2.ipynb` in Colab (or Jupyter with a CUDA GPU).
+2. Set `ACTIVE_MODEL` in the registry cell to the model you want to run.
+3. Set `OPENAI_API_KEY` and `HF_TOKEN` in Colab Secrets (or environment).
+4. Run all cells. Outputs land in `results/results_<tag>.csv` and friends.
+5. For Experiment 2, open `ATDS_Semantic_Drift.ipynb`, set `MODEL_ID`, and run. Wikipedia contexts are cached in `wiki_contexts_cache.json` so subsequent model runs reuse them.
+
+---
+
+## References
+
+Lin, S., Hilton, J., & Evans, O. (2022). TruthfulQA: Measuring how models mimic human falsehoods. In *Proceedings of ACL*.
+
+Wei, Z., Wang, S., Rong, X., Liu, X., & Li, H. (2025). Shadows in the attention: Contextual perturbation and representation drift in the dynamics of hallucination in LLMs. *arXiv:2505.16894.*
+
+Wu, Y., Schlegel, V., & Batista-Navarro, R. (2025). Natural context drift undermines the natural language understanding of large language models. *arXiv:2509.01093.*
+
+---
+
+*Thanks to our TA Satyapragnya for the initial paper pointers.*
